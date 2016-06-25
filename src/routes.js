@@ -1,10 +1,11 @@
 import Homepage from './components/Homepage'
 import NormalPage from './components/Normalpage'
 
-import ResourcesPage from './components/Resources'
-import ResourceList from './components/Resources/resource.list'
-import ResourceDetail from './components/Resources/resource.detail'
-import ResourceNew from './components/Resources/resource.new'
+import PostsPage from './components/Posts'
+import PostList from './components/Posts/post.list'
+import PostDetail from './components/Posts/post.detail'
+import PostNew from './components/Posts/post.new'
+import PostEdit from './components/Posts/post.edit'
 
 export default function (router) {
   router.map({
@@ -18,29 +19,29 @@ export default function (router) {
       component: NormalPage
     },
 
-    '/resources': {
-      name: 'resources',
-      component: ResourcesPage,
+    '/posts': {
+      name: 'postspage',
+      component: PostsPage,
 
       subRoutes: {
         '/': {
-          name: 'resourcelist',
-          component: ResourceList
+          name: 'postlist',
+          component: PostList
         },
 
         '/new': {
-          name: 'resourcenew',
-          component: ResourceNew
+          name: 'postnew',
+          component: PostNew
         },
 
-        '/:resourceid': {
-          name: 'resourcedetail',
-          component: ResourceDetail,
+        '/:postid': {
+          name: 'postdetail',
+          component: PostDetail,
 
           subRoutes: {
             '/edit': {
-              name: 'resourceedit',
-              component: ResourceDetail
+              name: 'postedit',
+              component: PostEdit
             }
           }
         }
