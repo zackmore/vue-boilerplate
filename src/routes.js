@@ -1,37 +1,50 @@
+import Homepage from './components/Homepage'
+import NormalPage from './components/Normalpage'
 
+import ResourcesPage from './components/Resources'
+import ResourceList from './components/Resources/resource.list'
+import ResourceDetail from './components/Resources/resource.detail'
+import ResourceNew from './components/Resources/resource.new'
 
-export default function(router) {
+export default function (router) {
   router.map({
     '/': {
-      name: 'homepage'
+      name: 'homepage',
+      component: Homepage
     },
 
     '/page': {
-      name: 'normalpage'
+      name: 'normalpage',
+      component: NormalPage
     },
 
     '/resources': {
+      name: 'resources',
+      component: ResourcesPage,
+
       subRoutes: {
         '/': {
-          name: 'resourcelist'
+          name: 'resourcelist',
+          component: ResourceList
         },
-        
+
         '/new': {
-          name: 'resourcenew'
+          name: 'resourcenew',
+          component: ResourceNew
         },
 
         '/:resourceid': {
-          subRoutes: {
-            '/': {
-              name: 'resourcedetail'
-            },
+          name: 'resourcedetail',
+          component: ResourceDetail,
 
+          subRoutes: {
             '/edit': {
-              name: 'resourceedit'
-            },
+              name: 'resourceedit',
+              component: ResourceDetail
+            }
           }
-        },
+        }
       }
-    },
+    }
   })
 }

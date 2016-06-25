@@ -1,0 +1,3 @@
+<template>
+The detail.
+</template>
