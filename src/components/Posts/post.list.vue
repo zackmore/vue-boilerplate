@@ -1,4 +1,5 @@
 <template>
+<h3>The Posts List</h3>
 <ul>
   <li v-for="post in posts">
     <a v-link="{ name: 'postdetail', params: { postid: post.id }}">{{ post.title }} </a>
@@ -23,8 +24,11 @@ export default {
     }
   },
 
-  created () {
-    this.getPosts()
+  route: {
+    activate ({ next }) {
+      this.getPosts()
+      next()
+    }
   }
 }
 </script>

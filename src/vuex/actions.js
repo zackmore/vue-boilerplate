@@ -8,3 +8,11 @@ export const getPosts = ({ dispatch }) => {
     dispatch(types.GET_POSTS_FAIL)
   })
 }
+
+export const getPost = ({ dispatch }, postid) => {
+  api.getPost(postid).then(response => {
+    dispatch(types.GET_POST_SUCCESS, { post: response.data })
+  }, response => {
+    dispatch(types.GET_POST_FAIL)
+  })
+}

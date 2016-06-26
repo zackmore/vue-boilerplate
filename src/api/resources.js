@@ -26,4 +26,4 @@ Vue.http.interceptors.push({
 })
 */
 
-export const PostsResource = Vue.resource(API_ROOT + 'posts')
+export const PostsResource = Vue.resource(API_ROOT + 'posts{/postid}')
