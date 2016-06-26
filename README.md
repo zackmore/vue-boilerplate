@@ -1,6 +1,13 @@
 # vue-boilerplate
 
-> A Frontend SPA boilerplate with vue, vue-router, vue-resource and vuex.
+> A Typical CRUD Frontend SPA boilerplate with vue, vue-router, vue-resource and vuex.
+
+## TODO
+
+1. Post Detail Delete
+2. Post Detail Edit
+3. Style
+4. gh-pages
 
 ## Build Setup
 
