@@ -1,6 +1,8 @@
 import {
   GET_POSTS_SUCCESS,
-  GET_POSTS_FAIL
+  GET_POSTS_FAIL,
+  DELETE_POST_SUCCESS,
+  DELETE_POST_FAIL
 } from '../types'
 
 const state = {
@@ -13,6 +15,12 @@ const mutations = {
   },
 
   [GET_POSTS_FAIL] (state, action) {
+  },
+
+  [DELETE_POST_SUCCESS] (state, action) {
+  },
+
+  [DELETE_POST_FAIL] (state, action) {
   }
 }
 

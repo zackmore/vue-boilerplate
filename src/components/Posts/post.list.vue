@@ -5,13 +5,13 @@
     <a v-link="{ name: 'postdetail', params: { postid: post.id }}">{{ post.title }} </a>
     <br>
     <button>Edit</button>
-    <button>Delete</button>
+    <button v-on:click.prevent="deletePost(post.id)">Delete</button>
   </li>
 </ul>
 </template>
 
 <script>
-import { getPosts } from '../../vuex/actions'
+import { getPosts, deletePost } from '../../vuex/actions'
 
 export default {
   vuex: {
@@ -20,7 +20,8 @@ export default {
     },
 
     actions: {
-      getPosts
+      getPosts,
+      deletePost
     }
   },
 
