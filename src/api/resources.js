@@ -9,6 +9,7 @@ Vue.http.options.xhr = {
   withCredentials: true
 }
 
+/*
 Vue.http.interceptors.push({
   request (request) {
     // Some global actions for request
@@ -23,5 +24,6 @@ Vue.http.interceptors.push({
     return response
   }
 })
+*/
 
-export const PostsResource = Vue.resource(API_ROOT + '/posts')
+export const PostsResource = Vue.resource(API_ROOT + 'posts')

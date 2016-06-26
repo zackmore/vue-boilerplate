@@ -1,4 +1,5 @@
 const state = {
+  post: {}
 }
 
 const mutations = {
