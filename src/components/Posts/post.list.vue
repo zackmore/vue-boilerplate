@@ -4,7 +4,7 @@
   <li v-for="post in posts">
     <a v-link="{ name: 'postdetail', params: { postid: post.id }}">{{ post.title }} </a>
     <br>
-    <button>Edit</button>
+    <button v-link="{ name: 'postedit', params: { postid: post.id } }">Edit</button>
     <button v-on:click.prevent="deletePost(post.id)">Delete</button>
   </li>
 </ul>

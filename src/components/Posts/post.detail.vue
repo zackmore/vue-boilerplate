@@ -21,23 +21,10 @@
 </template>
 
 <script>
-import { getPost } from '../../vuex/actions'
-
 export default {
   vuex: {
     getters: {
-      post: state => { console.log(state); return state.postdetail.post }
-    },
-
-    actions: {
-      getPost
-    }
-  },
-
-  route: {
-    activate ({ next }) {
-      this.getPost(this.$route.params.postid)
-      next()
+      post: state => state.postdetail.post
     }
   }
 }

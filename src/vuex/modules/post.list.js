@@ -18,9 +18,11 @@ const mutations = {
   },
 
   [DELETE_POST_SUCCESS] (state, action) {
+    window.alert('Delete success!')
   },
 
   [DELETE_POST_FAIL] (state, action) {
+    window.alert('Delete fail!')
   }
 }
 
