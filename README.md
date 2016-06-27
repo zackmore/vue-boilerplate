@@ -4,10 +4,7 @@
 
 ## TODO
 
-1. Post Detail Delete
-2. Post Detail Edit
-3. Style
-4. gh-pages
+1. Style
 
 ## Build Setup
 
